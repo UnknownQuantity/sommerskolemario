@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author Jacob
  */
-public class MenuKortUI {
+public class MenukortUI {
  
     public static void visMenuKort(ArrayList<Pizza> pizzaliste){
         

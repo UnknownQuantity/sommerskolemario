@@ -5,9 +5,8 @@
  */
 package PresentationLayer;
 
+import FunctionLayer.Ordre;
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -46,13 +45,27 @@ public class MainMenu {
     public static void visMenukort() {
         
         try {
-            MenuKortUI.visMenuKort(DataLayer.MenuFacade.getMenu());
+            MenukortUI.visMenuKort(DataLayer.MenuFacade.getMenu());
             
             
         } catch (Exception ex) {
             System.out.println("Fejl :( " + ex.getMessage());
         }
         
+    }
+    
+    
+    public static void createOrder(){
+        
+        Ordre nyOrdre;
+        
+        try {
+            nyOrdre = DataLayer.OrdreFacade.createOrder(new Ordre(1140, 157, 1));
+            System.out.println(nyOrdre.toString());
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
     }
     
 }
